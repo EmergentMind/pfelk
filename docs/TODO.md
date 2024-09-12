@@ -4,8 +4,22 @@ NOTE! pfsense remote logging currently DISABLED!
 
 - ~~install pfelk via container and connect it to pfsense~~
 
-- continue packaging elasticsearch 8.14.1
+- search github nixos repos to get ani idea of how many people are using these various packages.
+
+- update packages from 7 to genearic for latest
+  - elasticsearch
+  - logstash
+  - beats
+    - journalbeat
+    - filebeat
+    - metricbeat
+  - kibana
+
 Next step is to figure out how to build the package to test it out. also see the notes in personal wiki for some stuff aa gave me.
+
+
+- after 8.14.1 successful, then look into nixpkgs-update stuff
+
 
 ## Long Term
 
@@ -31,7 +45,9 @@ Next step is to figure out how to build the package to test it out. also see the
 
   - ~~update all-packages entries~~
   - ~~update nixpkgs/pkgs/search/elasticsearch/8.x.nix~~
-  - confirm it builds
+  - ~~confirm it builds~~
+  - Generate hashes for other architectures
+    - look into updating via nixpkgs-update.
   - commit
   - update plugins and add hashes ../servers/search/elasticsearch/plugins.nix
   - confirm
@@ -50,6 +66,10 @@ Next step is to figure out how to build the package to test it out. also see the
   - update all-packages entries
 
 - pkg for maxmind geoip 7.0.1+
+
+
+update tests
+  nixpkgs/tests/elk.nix
 
 ### 2. pfelk is nixos compatible
 
